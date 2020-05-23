@@ -68,3 +68,26 @@ async function viewProfile(req,res)
         res.status(404).send()
     }
 }
+exports.addToCart= async (req,res) => {
+  const product = req.params.id
+  try{
+    const user = await User.findById(req.user._id)
+    user.cart = user.cart.concat({product})
+    await user.save()
+    res.status(201).send(user.cart)
+
+  } catch (e) {
+    res.status(400).send()
+  }
+}
+exports.showCart= async (req,res) => {
+  try{
+    const user = await User.findById(req.user._id)
+    
+    await user.populate('cart.product').execPopulate()
+    console.log(user.cart)
+    res.send(user.cart)
+  } catch(e) {
+    res.status(404).send(e)
+  }
+}

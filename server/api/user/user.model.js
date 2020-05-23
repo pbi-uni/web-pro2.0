@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique:true,
+        unique: true,
         trim: true,
         lowercase: true
     },
@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
     userName: {
         type: String,
         required: true,
-        unique:true,
+        unique: true,
         trim: true
     },
     password: {
@@ -49,39 +49,48 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
-    googleId:{
-        type:String
+    googleId: {
+        type: String
     },
     avatar: {
         type: Buffer
-    }
+    },
+    cart: [
+        {
+            product: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Product'
+            }
+
+        }
+    ]
 });
 
 
 
 
-userSchema.methods.generateAuthToken = function() { 
-    const token = jwt.sign({ _id: this._id, role: 'user'}, config.jwtSecret,{
+userSchema.methods.generateAuthToken = function () {
+    const token = jwt.sign({ _id: this._id, role: 'user' }, config.jwtSecret, {
         expiresIn: 60 * 60 * 5
-      });
+    });
     return token;
-  }
-  
-  const User = mongoose.model('User', userSchema);
-  
-  function validateUser(user) {
+}
+
+const User = mongoose.model('User', userSchema);
+
+function validateUser(user) {
     const schema = {
-      firstName: Joi.string().min(5).max(50).required(),
-      lastName: Joi.string(),
-      email: Joi.string().min(5).max(255).required().email(),
-      mobileNo:Joi.string().required(),
-      password: Joi.string().min(8).max(255).required(),
-      dob:Joi.date(),
-      userName:Joi.string().required()
+        firstName: Joi.string().min(5).max(50).required(),
+        lastName: Joi.string(),
+        email: Joi.string().min(5).max(255).required().email(),
+        mobileNo: Joi.string().required(),
+        password: Joi.string().min(8).max(255).required(),
+        dob: Joi.date(),
+        userName: Joi.string().required()
     };
-  
+
     return Joi.validate(user, schema);
-  }
-  
-  exports.User = User; 
-  exports.validate = validateUser;
+}
+
+exports.User = User;
+exports.validate = validateUser;

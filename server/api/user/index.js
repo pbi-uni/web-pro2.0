@@ -26,5 +26,7 @@ router.get('/google-signIn/callback', passport.authenticate('google', {
   });
   router.post('/me/avatar',upload.single('avatar'),auth.checkToken, controller.uploadPic)
   router.get('/me/avatar',auth.checkToken, controller.getPic)
+  router.post('/addToCart/:id',auth.checkToken,controller.addToCart)
+  router.get('/cart',auth.checkToken,controller.showCart)
   
   module.exports = router; 

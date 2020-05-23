@@ -1,10 +1,12 @@
 const express = require('express');
 const userRoutes = require('../api/user');
+const productRouter = require('../api/product')
 
 const router = express.Router(); // eslint-disable-line new-cap
 
 
 router.use('/user', userRoutes);
+router.use('/product', productRouter);
 
 module.exports = router;
 
