@@ -1,0 +1,124 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <!-- <div class="container" style="margin: 0%;"> -->
+    <div style="margin: 0%;">
+        <button class="openbtn m-auto" (click)="openNav()">&#9776; </button>
+        <a class="navbar-brand" routerLink="">All-In-1</a>
+    </div>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav m-auto">
+            <li class="nav-item m-auto">
+                <a class="nav-link" style="cursor: pointer;" routerLink="homepage"><i
+                        class="fa fa-fw fa-home"></i>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=""><i class="fa fa-th-list"></i>Categories</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" style="cursor: pointer;" >Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                    placeholder="Search...">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary btn-number">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+        </form>
+
+
+
+        <div class="navbar-nav m-auto ">
+            <a routerLink="cart" class="btn btn-success btn-sm-ml-3 ">
+                <i class="fa fa-shopping-cart"></i> Cart
+                <span class="badge badge-light">3</span>
+            </a>
+        </div>
+
+        <div>
+            <button routerLink="usersignup" type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+        
+
+
+    </div>
+    <!-- </div> -->
+
+</nav>
+
+
+
+
+<div id="mySidebar" class="sidebar">
+    <!-- <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
+
+    <!-- <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+                <a href="#">Home 1</a>
+            </li>
+            <li>
+                <a href="#">Home 2</a>
+            </li>
+            <li>
+                <a href="#">Home 3</a>
+            </li>
+        </ul>
+    </li>  -->
+
+    <li>
+        <a style="cursor: pointer;" routerLink="homepage" (click)="closeNav()"><i class="fa fa-fw fa-home"></i>Home</a>
+    </li>
+    <li>
+
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle"><i
+                class="fa fa-th-list"></i> Category</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+                <a style="cursor: pointer;" routerLink="0" (click)="closeNav()">General store</a>
+            </li>
+            <li>
+                <a style="cursor: pointer;" routerLink="1" (click)="closeNav()">Medicine store</a>
+            </li>
+            <li>
+                <a style="cursor: pointer;" routerLink="2" (click)="closeNav()">Cosmetic store</a>
+            </li>
+            <li>
+                <a style="cursor: pointer;" routerLink="3" (click)="closeNav()">Dairy store</a>
+            </li>
+            <li>
+                <a style="cursor: pointer;" routerLink="4" (click)="closeNav()">Stationary store</a>
+            </li>
+        </ul>
+
+    </li>
+    <li>
+        <a style="cursor: pointer;" routerLink="history" (click)="closeNav()"> Your orders</a>
+    </li>
+    <li>
+        <a style="cursor: pointer;" (click)="closeNav()">Products</a>
+    </li>
+    <li>
+        <a style="cursor: pointer;" routerLink="profile" (click)="closeNav()">Your Account</a>
+    </li>
+    <li>
+        <a href="#" (click)="closeNav()"><i class="fa fa-cog"></i> Settings</a>
+    </li>
+    <li>
+        <a href="#" (click)="closeNav()">Sign Out</a>
+    </li>
+</div>

@@ -1,0 +1,251 @@
+<div class="jumbotron jumbotron-fluid">
+    <!-- <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div> -->
+    <div class="media">
+        <img src="../../../assets/resturant.jpg" class="align-self-center mr-3" alt="Resturant Image">
+        <div class="media-body">
+            <h5 class="mt-0 display-4">Raman Kiryana Store</h5>
+            <h2 class="lead">Mansa-151505</h2>
+            Ratings:&nbsp;
+            <div *ngFor="let i of [1,2,3,4,5];let j=index;" style="display: inline;">
+                <div *ngIf="rating>j;else loggedOut" style="display: inline;"> <i class="fa fa-star"></i></div>
+                <ng-template #loggedOut>
+                    <i class="fa fa-star-o"></i>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <nav id="navbar-example3" class="navbar navbar-light bg-light">
+                <a class="navbar-brand">Categories</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="order/#item-1">Pulses</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="order/#item-1-1">A type</a>
+                        <a class="nav-link ml-3 my-1" href="order/#item-1-2">B-type</a>
+                    </nav>
+                    <a class="nav-link" href="order/#item-2">Fruits</a>
+                    <a class="nav-link" href="order/#item-3">Vegetables</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="order/#item-3-1">Green</a>
+                        <a class="nav-link ml-3 my-1" href="order/#item-3-2">Refrigeratored</a>
+                    </nav>
+                </nav>
+            </nav>
+
+        </div>
+        <div class="col-9">
+            <div style="position: relative;" data-spy="scroll" data-target="#navbar-example3">
+                <h2 id="item-1">Pulses</h2>
+                <h3 id="item-1-1">A-type Pulses</h3>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Green Dal&nbsp;(1kg)</h5>
+                            <!-- <small>3 days ago</small> -->
+                            <button type="button" class="btn btn-outline-success">ADD</button>
+                        </div>
+                        <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                            varius
+                            blandit.</p> -->
+                        <small>Rs.100</small>
+                        </div>
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Yellow Dal&nbsp;(1kg)</h5>
+                                <!-- <small>3 days ago</small> -->
+                                <button type="button" class="btn btn-outline-success">ADD</button>
+                            </div>
+                            <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                varius
+                                blandit.</p> -->
+                            <small>Rs.80</small>
+                            </div>
+                            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Red Dal&nbsp;(1kg)</h5>
+                                    <!-- <small>3 days ago</small> -->
+                                    <button type="button" class="btn btn-outline-success">ADD</button>
+                                </div>
+                                <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                    varius
+                                    blandit.</p> -->
+                                <small>Rs.120</small>
+                                </div>
+                    <br>
+                </div>
+
+                <h3 id="item-1-2">B-type Pulses</h3>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Green Dal&nbsp;(1kg)</h5>
+                            <!-- <small>3 days ago</small> -->
+                            <button type="button" class="btn btn-outline-success">ADD</button>
+                        </div>
+                        <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                            varius
+                            blandit.</p> -->
+                        <small>Rs.100</small>
+                        </div>
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Yellow Dal&nbsp;(1kg)</h5>
+                                <!-- <small>3 days ago</small> -->
+                                <button type="button" class="btn btn-outline-success">ADD</button>
+                            </div>
+                            <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                varius
+                                blandit.</p> -->
+                            <small>Rs.80</small>
+                            </div>
+                            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Red Dal&nbsp;(1kg)</h5>
+                                    <!-- <small>3 days ago</small> -->
+                                    <button type="button" class="btn btn-outline-success">ADD</button>
+                                </div>
+                                <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                    varius
+                                    blandit.</p> -->
+                                <small>Rs.120</small>
+                                </div>
+                    <br>
+                </div>
+
+                <h2 id="item-2">Fruits</h2>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Green Dal&nbsp;(1kg)</h5>
+                            <!-- <small>3 days ago</small> -->
+                            <button type="button" class="btn btn-outline-success">ADD</button>
+                        </div>
+                        <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                            varius
+                            blandit.</p> -->
+                        <small>Rs.100</small>
+                        </div>
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Yellow Dal&nbsp;(1kg)</h5>
+                                <!-- <small>3 days ago</small> -->
+                                <button type="button" class="btn btn-outline-success">ADD</button>
+                            </div>
+                            <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                varius
+                                blandit.</p> -->
+                            <small>Rs.80</small>
+                            </div>
+                            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Red Dal&nbsp;(1kg)</h5>
+                                    <!-- <small>3 days ago</small> -->
+                                    <button type="button" class="btn btn-outline-success">ADD</button>
+                                </div>
+                                <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                    varius
+                                    blandit.</p> -->
+                                <small>Rs.120</small>
+                                </div>
+                    <br>
+                </div>
+
+                <h2 id="item-3">Vegetables</h2>
+                <h3 id="item-3-1">Green</h3>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Green Dal&nbsp;(1kg)</h5>
+                            <!-- <small>3 days ago</small> -->
+                            <button type="button" class="btn btn-outline-success">ADD</button>
+                        </div>
+                        <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                            varius
+                            blandit.</p> -->
+                        <small>Rs.100</small>
+                        </div>
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Yellow Dal&nbsp;(1kg)</h5>
+                                <!-- <small>3 days ago</small> -->
+                                <button type="button" class="btn btn-outline-success">ADD</button>
+                            </div>
+                            <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                varius
+                                blandit.</p> -->
+                            <small>Rs.80</small>
+                            </div>
+                            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Red Dal&nbsp;(1kg)</h5>
+                                    <!-- <small>3 days ago</small> -->
+                                    <button type="button" class="btn btn-outline-success">ADD</button>
+                                </div>
+                                <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                    varius
+                                    blandit.</p> -->
+                                <small>Rs.120</small>
+                                </div>
+                    <br>
+                </div>
+
+                <h3 id="item-3-2">Refrigeratored</h3>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Green Dal&nbsp;(1kg)</h5>
+                            <!-- <small>3 days ago</small> -->
+                            <button type="button" class="btn btn-outline-success">ADD</button>
+                        </div>
+                        <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                            varius
+                            blandit.</p> -->
+                        <small>Rs.100</small>
+                        </div>
+                        <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Yellow Dal&nbsp;(1kg)</h5>
+                                <!-- <small>3 days ago</small> -->
+                                <button type="button" class="btn btn-outline-success">ADD</button>
+                            </div>
+                            <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                varius
+                                blandit.</p> -->
+                            <small>Rs.80</small>
+                            </div>
+                            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Red Dal&nbsp;(1kg)</h5>
+                                    <!-- <small>3 days ago</small> -->
+                                    <button type="button" class="btn btn-outline-success">ADD</button>
+                                </div>
+                                <!-- <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                                    varius
+                                    blandit.</p> -->
+                                <small>Rs.120</small>
+                                </div>
+                    <br>
+                </div>
+
+
+
+
+
+            </div>
+
+            <br>
+        </div>
+
+    </div>
+</div>

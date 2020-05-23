@@ -1,0 +1,233 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+       <header class="card-header">
+         <a href="" class="float-right btn btn-outline-primary mt-1">Refresh</a>
+         <h4 class="card-title mt-2">Register ShopKeeper</h4>
+       </header>
+       <article class="card-body">
+              <form>
+                <div class="form-row">
+                  <div class="col form-group">
+                    <label for ="firstName">First Name</label>
+                    <input type="text" id ="firstname" class="form-control"  
+                    name="lastname"
+                    />
+                  </div> <!-- form-group end.// -->
+                  <div class="col form-group">
+                    <label for ="lastName">Last Name</label>
+                    <input type="text" id ="Lastname" class="form-control"  
+                    name="lastname"
+                    />
+                  </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+                <div class="form-group">
+                    <label for="email">Owner E-Mail*</label>
+                    <input type="email" id="email" class="form-control" #emailRef="ngModel" ngModel name="email"
+                        required pattern="^[\w-\.]+@([\w]+\.)+[\w-]{2,4}$">
+                    <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)">
+                        <div [hidden]="!emailRef.errors.required">Email Id is required</div>
+                        <div [hidden]="!emailRef.errors.pattern">Email Id is not in proper format </div>
+                    </div>
+                  <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div> <!-- form-group end.// -->
+                <div class="form-group">
+                    <label for="resName">Restaurant Name*</label>
+                    <input type="text" id="resName" class="form-control" #resNameRef="ngModel" ngModel name="resName" required>
+                    <div *ngIf="resNameRef.errors && (resNameRef.dirty || resNameRef.touched)">
+                        <div [hidden]="!resNameRef.errors.required">Restaurant Name is required</div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mobilenumber">Owner Mobile number*</label>
+                    <input type="text" id="mobilenumber" class="form-control" #mobilenumberRef="ngModel" ngModel
+                        name="mobilenumber" required pattern="[0-9]{10}">
+                    <div *ngIf="mobilenumberRef.errors && (mobilenumberRef.dirty || mobilenumberRef.touched)">
+                        <div [hidden]="!mobilenumberRef.errors.required">Owner Mobile number is required</div>
+                        <div [hidden]="!mobilenumberRef.errors.pattern"> OwnerMobile number is not in proper format(does not
+                            start with 0 or +91) </div>
+                    </div>
+                </div> <!-- form-group end.// -->
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for ="pincode">Pincode</label>
+                    <input type="number" id ="pincode" class="form-control"  
+                    name="pincode"
+                    />
+                    <small class="form-text text-muted">Working location</small>
+                  </div> <!-- form-group end.// -->
+                  <div class="form-group col-md-6">
+                    <label>Country</label>
+                    <select id="inputState" class="form-control">
+                      <option> Choose...</option>
+                        <option>Uzbekistan</option>
+                        <option>Russia</option>
+                        <option selected="">United States</option>
+                        <option>India</option>
+                        <option>Afganistan</option>
+                    </select>
+                  </div> <!-- form-group end.// -->
+                </div> <!-- form-row.// -->
+                <div class="form-row">
+                  <div class="col form-group">
+                    <label for="Licence">Shop Licence No*</label>
+                    <input type="text" id="licence" class="form-control" #licenceRef="ngModel" ngModel name="licence" required
+                        >
+                    <div *ngIf="licenceRef.errors && (licenceRef.dirty || licenceRef.touched)">
+                        <div [hidden]="!licenceRef.errors.required">Licence No. is required</div>
+                    </div>
+                  </div> <!-- form-group end.// -->
+                  <div class="col form-group">
+                    <label for ="adhar">Adhar No.</label>
+                    <input type="number" id ="adhar" class="form-control"  
+                    name="adhar"
+                    />
+                  </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+                <div class="form-group">
+                    <label for="areaName">Shop Address</label>
+                    <input type="text" id="areaName" class="form-control" #areaNameRef="ngModel" ngModel name="areaName" required>
+                    <div *ngIf="areaNameRef.errors && (areaNameRef.dirty || areaNameRef.touched)">
+                        <div [hidden]="!areaNameRef.errors.required">Restaurant Area Name is required</div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for ="password">Password</label>
+                  <input type="password" id ="password" class="form-control"  
+                  name="password"
+                  />
+                </div>
+                 <!-- form-group end.// -->  
+                 <div class="form-group">
+                  <label for ="repassword">Re-Password</label>
+                  <input type="repassword" id ="repassword" class="form-control"  
+                  name="repassword"
+                  />
+                </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block"> Send A Request</button>
+                  </div> <!-- form-group// -->      
+                  <small class="text-muted">By clicking this button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+              </form>
+       </article> <!-- card-body end .// -->
+       <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+      </div> <!-- card.// -->
+    </div> <!-- col.//-->
+  </div> <!-- row.//-->
+</div> 
+<!--container end.//-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <form  #form1="ngForm">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Register ShopKeeper</h2>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col">
+                    <label for="resName">Restaurant Name*</label>
+                    <input type="text" id="resName" class="form-control" #resNameRef="ngModel" ngModel name="resName" required>
+                    <div *ngIf="resNameRef.errors && (resNameRef.dirty || resNameRef.touched)">
+                        <div [hidden]="!resNameRef.errors.required">Restaurant Name is required</div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="name">Owner Name*</label>
+                    <input type="text" id="name" class="form-control" #nameRef="ngModel" ngModel name="name" required>
+                    <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)">
+                        <div [hidden]="!nameRef.errors.required">Owner Name is required</div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="email">Owner E-Mail*</label>
+                    <input type="email" id="email" class="form-control" #emailRef="ngModel" ngModel name="email"
+                        required pattern="^[\w-\.]+@([\w]+\.)+[\w-]{2,4}$">
+                    <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)">
+                        <div [hidden]="!emailRef.errors.required">Email Id is required</div>
+                        <div [hidden]="!emailRef.errors.pattern">Email Id is not in proper format </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="mobilenumber">Owner Mobile number*</label>
+                    <input type="text" id="mobilenumber" class="form-control" #mobilenumberRef="ngModel" ngModel
+                        name="mobilenumber" required pattern="[0-9]{10}">
+                    <div *ngIf="mobilenumberRef.errors && (mobilenumberRef.dirty || mobilenumberRef.touched)">
+                        <div [hidden]="!mobilenumberRef.errors.required">Owner Mobile number is required</div>
+                        <div [hidden]="!mobilenumberRef.errors.pattern"> OwnerMobile number is not in proper format(does not
+                            start with 0 or +91) </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" class="form-control" #passwordRef="ngModel" ngModel
+                        name="password" required minlength="6">
+                    <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)">
+                        <div [hidden]="!passwordRef.errors.required">password is required</div>
+                        <div [hidden]="!passwordRef.errors.minlength">password is of shorter length </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="retype pasword">Retype Password*</label>
+                    <input type="password" id="retypepassword" class="form-control" #retypepasswordRef="ngModel" ngModel
+                        name="retypepassword" required minlength="6">
+                    <div
+                        *ngIf="passwordRef.value!=retypepasswordRef.value  && (retypepasswordRef.dirty || retypepasswordRef.touched)">
+                        Password does not match
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label for="areaName">Restaurant Area Name*</label>
+                    <input type="text" id="areaName" class="form-control" #areaNameRef="ngModel" ngModel name="areaName" required>
+                    <div *ngIf="areaNameRef.errors && (areaNameRef.dirty || areaNameRef.touched)">
+                        <div [hidden]="!areaNameRef.errors.required">Restaurant Area Name is required</div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label for="Licence">Restaurant Licence No*</label>
+                    <input type="text" id="licence" class="form-control" #licenceRef="ngModel" ngModel name="licence" required
+                        >
+                    <div *ngIf="licenceRef.errors && (licenceRef.dirty || licenceRef.touched)">
+                        <div [hidden]="!licenceRef.errors.required">Licence No. is required</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn btn-primary" style="float: left;;" type="button" routerLink="" >Back</button>
+                <button class="btn btn-primary" type="button" style="float: right;;" [disabled]="!form1.valid">Sign Up</button>
+
+
+            </div>
+        </form>
+    </div>
+</div> -->
